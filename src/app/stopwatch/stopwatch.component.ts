@@ -13,7 +13,10 @@ export class StopwatchComponent {
     return ((hours / 12) * 360) - 180;
   }
 
-  calculateMinuteHandAngle() { }
+  calculateMinuteHandAngle(): number {
+    const minutes = (this.time / (1000 * 60)) % 60;
+    return ((minutes / 60) * 360) - 180;
+  }
 
   calculateSecondHandAngle() { }
 }
