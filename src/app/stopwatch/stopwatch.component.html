@@ -1,8 +1,10 @@
-<div class="container">
-  <div class="screen">
-    <div class="stopwatch-center"></div>
-    <div class="hour-hand" [style.transform]="'rotate(' + calculateHourHandAngle() + 'deg)'"></div>
-    <div class="minute-hand" [style.transform]="'rotate(' + calculateMinuteHandAngle() + 'deg)'"></div>
-    <div class="second-hand" [style.transform]="'rotate(' + calculateSecondHandAngle() + 'deg)'"></div>
+<div class="stopwatch-container">
+  <div class="stopwatch-border">
+    <div class="stopwatch-screen">
+      <div class="stopwatch-center"></div>
+      <div class="hour-hand" [style.transform]="'rotate(' + calculateHourHandAngle() + 'deg)'"></div>
+      <div class="minute-hand" [style.transform]="'rotate(' + calculateMinuteHandAngle() + 'deg)'"></div>
+      <div class="second-hand" [style.transform]="'rotate(' + calculateSecondHandAngle() + 'deg)'"></div>
+    </div>
   </div>
 </div>
