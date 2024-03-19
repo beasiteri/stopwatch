@@ -1,4 +1,14 @@
 <div class="stopwatch-container">
+  <div class="stopwatch-buttons">
+    <div class="left-buttons">
+      <button class="lap-btn">Lap</button>
+      <button class="start-stop-btn">{{ isRunning ? 'Stop' : 'Start' }}</button>
+    </div>
+    <div class="right-buttons">
+      <button class="reset-btn">Reset</button>
+      <button class="clear-lap-btn">Clear</button>
+    </div>
+  </div>
   <div class="stopwatch-border">
     <div class="stopwatch-screen">
       <div class="stopwatch-center"></div>

@@ -12,6 +12,7 @@ export class StopwatchComponent implements OnInit {
   time = 0;
   numbers: string[] = [];
   isMobile: boolean = window.innerWidth <= 600;
+  isRunning: boolean = false;
 
   ngOnInit(): void {
     this.calculateNumbers();
