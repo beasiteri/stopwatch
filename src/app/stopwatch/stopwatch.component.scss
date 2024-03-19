@@ -18,12 +18,12 @@
       background-color: #fff;
       border-radius: 50%;
       height: 100%;
-      outline: 6px solid #34747f;
+      outline: 6px solid #313131;
       position: absolute;
       width: 100%;
 
       .stopwatch-center {
-        background-color: black;
+        background-color: #313131;
         border-radius: 50%;
         height: 10px;
         left: 50%;
@@ -114,7 +114,7 @@
         transform-origin: top;
 
         &::before {
-          background-color: black;
+          background-color: #313131;
           bottom: 100%;
           content: '';
           height: 15px;
@@ -137,5 +137,49 @@
         }
       }
     }
+  }
+
+  /* ---------- Buttons ---------- */
+  button {
+    background-color: #5a9da9;
+    border-radius: 5px 5px 0 0;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .lap-btn {
+    left: 30px;
+    position: absolute;
+    transform: rotate(-54deg);
+    top: 136px;
+    background-color: #d7d2d1;
+  }
+
+  .start-stop-btn {
+    left: 70px;
+    position: absolute;
+    transform: rotate(-38deg);
+    top: 91px;
+    color: white;
+  }
+
+  .reset-btn {
+    right: 70px;
+    position: absolute;
+    transform: rotate(38deg);
+    top: 88px;
+    background-color: #ff3407;
+    color: white;
+    font-weight: bold;
+  }
+
+  .clear-lap-btn {
+    right: 22px;
+    position: absolute;
+    transform: rotate(54deg);
+    top: 140px;
+    background-color: #5a9da9;
+    color: white;
   }
 }
