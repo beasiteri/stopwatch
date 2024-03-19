@@ -24,5 +24,76 @@
       transform: translate(-50%, -50%);
       width: 10px;
     }
+
+    /* ---------- Stopwatch hands ---------- */
+    .hour-hand,
+    .minute-hand,
+    .second-hand {
+      position: absolute;
+      transform-origin: top;
+    }
+
+    .hour-hand::after,
+    .minute-hand::after,
+    .second-hand::after {
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      content: '';
+      left: 50%;
+      position: absolute;
+      top: 100%;
+      transform: translateX(-50%) rotate(180deg);
+    }
+
+    .hour-hand {
+      background-color: #1e1e1e;
+      height: 150px;
+      left: calc(50% - 2px);
+      top: 50%;
+      width: 4px;
+
+      &::after {
+        border-bottom: 12px solid #1e1e1e;
+        height: 0;
+        top: calc(100% + 2px);
+        width: 0;
+      }
+    }
+
+    .minute-hand {
+      background-color: #1e1e1e;
+      height: 127px;
+      left: calc(50% - 1px);
+      top: 50%;
+      width: 2px;
+
+      &::after {
+        border-bottom: 12px solid #1e1e1e;
+        height: 0;
+        top: calc(100% + 2px);
+        width: 0;
+      }
+    }
+
+    .second-hand {
+      background-color: red;
+      height: 165px;
+      left: calc(50% - 1px);
+      top: 50%;
+      width: 2px;
+
+      &::after {
+        border-bottom: 12px solid red;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        content: '';
+        height: 0;
+        left: 50%;
+        position: absolute;
+        top: calc(100% + 2px);
+        transform: translateX(-50%) rotate(180deg);
+        width: 0;
+      }
+    }
   }
 }

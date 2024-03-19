@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./stopwatch.component.scss']
 })
 export class StopwatchComponent {
+  calculateHourHandAngle() { }
 
+  calculateMinuteHandAngle() { }
+
+  calculateSecondHandAngle() { }
 }
