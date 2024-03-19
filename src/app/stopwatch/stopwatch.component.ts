@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-stopwatch',
@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
 })
 export class StopwatchComponent {
   time = 0;
+
+  @HostBinding('style.display') display = 'flex';
+  @HostBinding('style.justify-content') justifyContent = 'center';
 
   calculateHourHandAngle(): number {
     const hours = (this.time / (1000 * 60 * 60)) % 12;
