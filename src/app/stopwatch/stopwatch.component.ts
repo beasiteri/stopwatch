@@ -18,5 +18,7 @@ export class StopwatchComponent {
     return ((minutes / 60) * 360) - 180;
   }
 
-  calculateSecondHandAngle() { }
+  calculateSecondHandAngle(): number {
+    return (((this.time % 60000) / 60000) * 360) - 180;
+  }
 }
