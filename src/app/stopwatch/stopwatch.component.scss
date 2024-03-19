@@ -1,0 +1,28 @@
+.container {
+  border: 1px solid #d9d9d9;
+  height: auto;
+  max-width: 360px;
+  padding: 50px;
+  position: relative;
+  width: 100%;
+
+  .screen {
+    background-color: #fff;
+    border-radius: 50%;
+    height: 100%;
+    outline: 6px solid #34747f;
+    position: absolute;
+    width: 100%;
+
+    .stopwatch-center {
+      background-color: black;
+      border-radius: 50%;
+      height: 10px;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+    }
+  }
+}
