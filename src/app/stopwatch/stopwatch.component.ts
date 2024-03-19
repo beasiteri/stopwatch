@@ -6,7 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./stopwatch.component.scss']
 })
 export class StopwatchComponent {
-  calculateHourHandAngle() { }
+  time = 0;
+
+  calculateHourHandAngle(): number {
+    const hours = (this.time / (1000 * 60 * 60)) % 12;
+    return ((hours / 12) * 360) - 180;
+  }
 
   calculateMinuteHandAngle() { }
 
