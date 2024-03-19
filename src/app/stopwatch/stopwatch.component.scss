@@ -103,6 +103,39 @@
           width: 0;
         }
       }
+
+      /* ---------- Numbers ---------- */
+      .number {
+        font-size: 20px;
+        font-weight: bold;
+        left: 47%;
+        position: absolute;
+        top: 50%;
+        transform-origin: top;
+
+        &::before {
+          background-color: black;
+          bottom: 100%;
+          content: '';
+          height: 15px;
+          left: 50%;
+          position: absolute;
+          transform: translateX(-30%);
+          width: 1px;
+        }
+
+        &.divisible-by-five:before {
+          width: 4px;
+        }
+
+        &:not(.divisible-by-five) {
+          visibility: hidden;
+
+          &:before {
+            visibility: visible;
+          }
+        }
+      }
     }
   }
 }
