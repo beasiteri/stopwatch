@@ -30,4 +30,18 @@ describe('StopwatchComponent', () => {
 
     button.click();
   }));
+
+  it('should pause the stopwatch and stop increasing time', fakeAsync(() => {
+    const initialTime = component.time;
+    const button = fixture.debugElement.nativeElement.querySelector('.start-stop-btn');
+
+    button.click();
+    tick(1000);
+    button.click();
+    const pausedTime = component.time;
+
+    tick(2000);
+
+    expect(component.time).toEqual(pausedTime);
+  }));
 });
