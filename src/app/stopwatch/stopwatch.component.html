@@ -1,4 +1,5 @@
 <div class="stopwatch-container">
+  <h2>Stopwatch</h2>
   <div class="stopwatch-border">
     <div class="stopwatch-screen">
       <div class="stopwatch-center"></div>
@@ -7,7 +8,7 @@
       <div class="second-hand" [style.transform]="'rotate(' + calculateSecondHandAngle() + 'deg)'"></div>
       <div class="number" [ngClass]="{'divisible-by-five': +number % 5 === 0}"
         *ngFor="let number of numbers; let i = index"
-        [style.transform]="'rotate(' + (i * 6) + 'deg) translateY(' + (isMobile ? '-105px' : '-160px') + ')'">
+        [style.transform]="'rotate(' + (i * 6) + 'deg) translateY(-120px)'">
         <span [ngClass]="{'divisible-by-five': +number % 5 === 0}">{{ number }}</span>
       </div>
     </div>

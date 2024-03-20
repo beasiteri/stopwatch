@@ -1,4 +1,4 @@
-import { Component, HostBinding, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-stopwatch',
@@ -6,12 +6,8 @@ import { Component, HostBinding, OnInit } from '@angular/core';
   styleUrls: ['./stopwatch.component.scss']
 })
 export class StopwatchComponent implements OnInit {
-  @HostBinding('style.display') display = 'flex';
-  @HostBinding('style.justify-content') justifyContent = 'center';
-
   time = 0;
   numbers: string[] = [];
-  isMobile: boolean = window.innerWidth <= 600;
   isRunning: boolean = false;
 
   ngOnInit(): void {

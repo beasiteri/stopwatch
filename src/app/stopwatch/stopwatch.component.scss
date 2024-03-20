@@ -1,36 +1,52 @@
+:host {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
 .stopwatch-container {
-  border: 1px solid #d9d9d9;
+  background-color: #1e1e1e;
+  border-radius: 15px;
   height: auto;
   max-width: 360px;
-  padding: 50px;
   position: relative;
   width: 100%;
 
+  h2 {
+    color: #D69C1A;
+    display: flex;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    justify-content: center;
+    margin: 40px 0;
+    text-transform: uppercase;
+  }
+
   .stopwatch-border {
     border-radius: 50%;
-    margin-top: 50px;
-    outline: 20px solid #5a9da9;
-    padding-bottom: 100%;
+    height: 300px;
     position: relative;
     width: 100%;
 
     .stopwatch-screen {
-      background-color: #fff;
+      background-color: #1e1e1e;
       border-radius: 50%;
-      height: 100%;
-      outline: 6px solid #313131;
+      height: 240px;
+      left: 50%;
       position: absolute;
-      width: 100%;
+      top: 40%;
+      transform: translate(-50%, -50%);
+      width: 240px;
 
       .stopwatch-center {
         background-color: #313131;
         border-radius: 50%;
-        height: 10px;
+        height: 15px;
         left: 50%;
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 10px;
+        width: 15px;
       }
 
       /* ---------- Stopwatch hands ---------- */
@@ -38,7 +54,8 @@
       .minute-hand,
       .second-hand {
         position: absolute;
-        transform-origin: top;
+        transform-origin: center top;
+        ;
       }
 
       .hour-hand::after,
@@ -54,14 +71,14 @@
       }
 
       .hour-hand {
-        background-color: #1e1e1e;
-        height: 150px;
+        background-color: #fff;
+        height: 102px;
         left: calc(50% - 2px);
         top: 50%;
         width: 4px;
 
         &::after {
-          border-bottom: 12px solid #1e1e1e;
+          border-bottom: 12px solid #fff;
           height: 0;
           top: calc(100% + 2px);
           width: 0;
@@ -70,7 +87,7 @@
 
       .minute-hand {
         background-color: #1e1e1e;
-        height: 127px;
+        height: 78px;
         left: calc(50% - 1px);
         top: 50%;
         width: 2px;
@@ -85,7 +102,7 @@
 
       .second-hand {
         background-color: red;
-        height: 165px;
+        height: 102px;
         left: calc(50% - 1px);
         top: 50%;
         width: 2px;
@@ -106,7 +123,8 @@
 
       /* ---------- Numbers ---------- */
       .number {
-        font-size: 20px;
+        color: #fff;
+        font-size: 18px;
         font-weight: bold;
         left: 47%;
         position: absolute;
@@ -114,7 +132,7 @@
         transform-origin: top;
 
         &::before {
-          background-color: #313131;
+          background-color: #fff;
           bottom: 100%;
           content: '';
           height: 15px;
@@ -141,19 +159,19 @@
 
   /* ---------- Buttons ---------- */
   .stopwatch-buttons {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
   button {
-    cursor: pointer;
-    width: 120px;
     border-radius: 5px;
+    border: none;
     color: white;
     cursor: pointer;
-    border: none;
+    cursor: pointer;
     height: 24px;
+    width: 120px;
   }
 
   .button-group {
@@ -168,6 +186,7 @@
 
   .start-stop-btn {
     background-color: #D69C1A;
+    color: #1e1e1e;
     margin-left: 10px;
   }
 
@@ -177,6 +196,7 @@
 
   .lap-btn {
     background-color: #D69C1A;
+    color: #1e1e1e;
     margin-left: 10px;
   }
 }
