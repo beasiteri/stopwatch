@@ -20,7 +20,12 @@
     </div>
     <div class="button-group lap-clear-group">
       <button class="clear-lap-btn">Clear Lap</button>
-      <button class="lap-btn">Lap</button>
+      <button class="lap-btn" (click)="lap()">Lap</button>
+    </div>
+  </div>
+  <div class="laps">
+    <div *ngFor="let lap of laps; let i = index" class="lap">
+      <b>Lap {{ i + 1 }}:</b> {{ formatTime(lap) }}
     </div>
   </div>
 </div>
