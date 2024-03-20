@@ -44,4 +44,15 @@ describe('StopwatchComponent', () => {
 
     expect(component.time).toEqual(pausedTime);
   }));
+
+  it('should reset the stopwatch to 0 and stop time', fakeAsync(() => {
+    const button = fixture.debugElement.nativeElement.querySelector('.reset-btn');
+
+    component.start();
+    tick(1000);
+
+    button.click();
+
+    expect(component.time).toBe(0);
+  }));
 });
