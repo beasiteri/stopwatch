@@ -19,7 +19,7 @@
       <button class="start-stop-btn" (click)="toggleStartStop()">{{ isRunning ? 'Stop' : 'Start' }}</button>
     </div>
     <div class="button-group lap-clear-group">
-      <button class="clear-lap-btn">Clear Lap</button>
+      <button class="clear-lap-btn" (click)="clearLaps()">Clear Lap</button>
       <button class="lap-btn" (click)="lap()">Lap</button>
     </div>
   </div>

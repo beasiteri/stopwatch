@@ -77,6 +77,10 @@ export class StopwatchComponent implements OnInit {
     this.laps.push(this.time);
   }
 
+  clearLaps(): void {
+    this.laps = [];
+  }
+
   formatTime(milliseconds: number): string {
     const totalMilliseconds = milliseconds;
     const millisecondsPart = totalMilliseconds % 1000;
