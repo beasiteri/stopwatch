@@ -9,6 +9,7 @@ export class StopwatchComponent implements OnInit {
   time = 0;
   numbers: string[] = [];
   isRunning: boolean = false;
+  intervalId: ReturnType<typeof setTimeout> | undefined;
 
   ngOnInit(): void {
     this.calculateNumbers();
@@ -37,6 +38,30 @@ export class StopwatchComponent implements OnInit {
       const value = (i % 60 === 0 ? 60 : i % 60).toString().padStart(2, '0');
       this.numbers.push(value);
       angle += angleIncrement;
+    }
+  }
+
+  toggleStartStop(): void {
+    if (this.isRunning) {
+      this.stop();
+    } else {
+      this.start();
+    }
+  }
+
+  start(): void {
+    if (!this.isRunning) {
+      this.isRunning = true;
+      this.intervalId = setInterval(() => {
+        this.time += 10;
+      }, 10);
+    }
+  }
+
+  stop(): void {
+    if (this.isRunning) {
+      clearInterval(this.intervalId);
+      this.isRunning = false;
     }
   }
 }
