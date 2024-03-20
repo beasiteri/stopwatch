@@ -75,4 +75,26 @@ describe('StopwatchComponent', () => {
     clearLapButton.click();
     expect(component.laps.length).toBe(0);
   });
+
+  it('should handle pressing start button multiple times', fakeAsync(() => {
+    const button = fixture.debugElement.nativeElement.querySelector('.start-stop-btn');
+
+    button.click();
+    tick(1000);
+
+    const timeAfterFirstClick = component.time;
+    expect(timeAfterFirstClick).toBeGreaterThan(0);
+
+    button.click();
+    const timeAfterSecondClick = component.time;
+    expect(timeAfterSecondClick).toBe(timeAfterFirstClick);
+
+    button.click();
+    tick(1000);
+
+    const timeAfterThirdClick = component.time;
+    expect(timeAfterThirdClick).toBeGreaterThan(timeAfterSecondClick);
+
+    button.click();
+  }));
 });
