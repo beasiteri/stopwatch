@@ -55,4 +55,24 @@ describe('StopwatchComponent', () => {
 
     expect(component.time).toBe(0);
   }));
+
+  it('should respond correctly to button clicks', () => {
+    const startStopButton = fixture.debugElement.nativeElement.querySelector('.start-stop-btn');
+    const resetButton = fixture.debugElement.nativeElement.querySelector('.reset-btn');
+    const lapButton = fixture.debugElement.nativeElement.querySelector('.lap-btn');
+    const clearLapButton = fixture.debugElement.nativeElement.querySelector('.clear-lap-btn');
+
+    startStopButton.click();
+    expect(component.isRunning).toBe(true);
+
+    resetButton.click();
+    expect(component.time).toBe(0);
+    expect(component.isRunning).toBe(false);
+
+    lapButton.click();
+    expect(component.laps.length).toBe(1);
+
+    clearLapButton.click();
+    expect(component.laps.length).toBe(0);
+  });
 });
