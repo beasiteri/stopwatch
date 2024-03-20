@@ -92,24 +92,24 @@
         width: 4px;
 
         &::after {
-          border-bottom: 12px solid white;
+          border-bottom: 18px solid white;
           height: 0;
-          top: calc(100% + 2px);
+          top: 100%;
           width: 0;
         }
       }
 
       .minute-hand {
-        background-color: #1e1e1e;
+        background-color: white;
         height: 78px;
-        left: calc(50% - 1px);
+        left: calc(50% - 2px);
         top: 50%;
-        width: 2px;
+        width: 4px;
 
         &::after {
-          border-bottom: 12px solid #1e1e1e;
+          border-bottom: 18px solid white;
           height: 0;
-          top: calc(100% + 2px);
+          top: 100%;
           width: 0;
         }
       }
@@ -129,7 +129,7 @@
           height: 0;
           left: 50%;
           position: absolute;
-          top: calc(100% + 2px);
+          top: 100%;
           transform: translateX(-50%) rotate(180deg);
           width: 0;
         }
@@ -183,8 +183,10 @@
       border: none;
       color: white;
       cursor: pointer;
-      cursor: pointer;
+      font-size: 12px;
+      font-weight: bold;
       height: 24px;
+      text-transform: uppercase;
       width: 120px;
     }
 
@@ -199,7 +201,7 @@
     }
 
     .start-stop-btn {
-      background-color: #d69c1a;
+      background-color: #d61a1a;
       color: #1e1e1e;
       margin-left: 10px;
     }
