@@ -176,41 +176,54 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    margin-bottom: 40px;
+
+    button {
+      border-radius: 5px;
+      border: none;
+      color: white;
+      cursor: pointer;
+      cursor: pointer;
+      height: 24px;
+      width: 120px;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .reset-btn {
+      background-color: #565656;
+    }
+
+    .start-stop-btn {
+      background-color: #d69c1a;
+      color: #1e1e1e;
+      margin-left: 10px;
+    }
+
+    .clear-lap-btn {
+      background-color: #565656;
+    }
+
+    .lap-btn {
+      background-color: #d69c1a;
+      color: #1e1e1e;
+      margin-left: 10px;
+    }
   }
 
-  button {
-    border-radius: 5px;
-    border: none;
-    color: white;
-    cursor: pointer;
-    cursor: pointer;
-    height: 24px;
-    width: 120px;
-  }
-
-  .button-group {
+  /* Laps */
+  .laps {
+    align-items: center;
+    background-color: white;
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-  }
-
-  .reset-btn {
-    background-color: #565656;
-  }
-
-  .start-stop-btn {
-    background-color: #d69c1a;
-    color: #1e1e1e;
-    margin-left: 10px;
-  }
-
-  .clear-lap-btn {
-    background-color: #565656;
-  }
-
-  .lap-btn {
-    background-color: #d69c1a;
-    color: #1e1e1e;
-    margin-left: 10px;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto 40px;
+    max-width: 230px;
+    padding: 10px;
   }
 }
