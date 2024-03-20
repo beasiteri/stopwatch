@@ -10,6 +10,7 @@ export class StopwatchComponent implements OnInit {
   numbers: string[] = [];
   isRunning: boolean = false;
   intervalId: ReturnType<typeof setTimeout> | undefined;
+  laps: number[] = [];
 
   ngOnInit(): void {
     this.calculateNumbers();
@@ -63,5 +64,12 @@ export class StopwatchComponent implements OnInit {
       clearInterval(this.intervalId);
       this.isRunning = false;
     }
+  }
+
+  reset(): void {
+    clearInterval(this.intervalId);
+    this.time = 0;
+    this.isRunning = false;
+    this.laps = [];
   }
 }
