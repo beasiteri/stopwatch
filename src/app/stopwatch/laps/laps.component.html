@@ -1,0 +1,5 @@
+<div class="laps" *ngIf="laps.length > 0">
+  <div *ngFor="let lap of laps; let i = index" class="lap">
+    <b>Lap {{ i + 1 }}:</b> {{ formatTime(lap) }}
+  </div>
+</div>

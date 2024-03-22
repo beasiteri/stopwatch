@@ -17,9 +17,5 @@
   <app-buttons [time]="time" [isRunning]="isRunning" (startStopClicked)="handleStartStopClicked()"
     (resetClicked)="handleResetClicked()" (lapClicked)="handleLapClicked()" (clearLapClicked)="handleClearLapClicked()">
   </app-buttons>
-  <div class="laps" *ngIf="laps.length > 0">
-    <div *ngFor="let lap of laps; let i = index" class="lap">
-      <b>Lap {{ i + 1 }}:</b> {{ formatTime(lap) }}
-    </div>
-  </div>
+  <app-laps [laps]="laps"></app-laps>
 </div>

@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
 
 import { StopwatchComponent } from './stopwatch.component';
+import { ButtonsComponent } from './buttons/buttons.component';
+import { LapsComponent } from './laps/laps.component';
 
 describe('StopwatchComponent', () => {
   let component: StopwatchComponent;
@@ -8,7 +10,7 @@ describe('StopwatchComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [StopwatchComponent]
+      declarations: [StopwatchComponent, ButtonsComponent, LapsComponent],
     });
     fixture = TestBed.createComponent(StopwatchComponent);
     component = fixture.componentInstance;
