@@ -13,7 +13,14 @@ describe('StopwatchComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [StopwatchComponent, ButtonsComponent, LapsComponent, TimerComponent, WatchHandsComponent, NumbersComponent],
+      declarations: [
+        StopwatchComponent,
+        ButtonsComponent,
+        LapsComponent,
+        TimerComponent,
+        WatchHandsComponent,
+        NumbersComponent,
+      ],
     });
     fixture = TestBed.createComponent(StopwatchComponent);
     component = fixture.componentInstance;

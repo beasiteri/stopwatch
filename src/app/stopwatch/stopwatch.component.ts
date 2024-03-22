@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { TimeFormatService } from './services/time-format.service';
 
 @Component({
@@ -7,6 +7,8 @@ import { TimeFormatService } from './services/time-format.service';
   styleUrls: ['./stopwatch.component.scss']
 })
 export class StopwatchComponent {
+  @Input() title = '';
+
   time = 0;
   numbers: string[] = [];
   laps: number[] = [];

@@ -1,4 +1,8 @@
-<div class="number" [ngClass]="{'divisible-by-five': +number % 5 === 0}" *ngFor="let number of numbers; let i = index"
+<div *ngFor="let number of numbers; let i = index"
+  class="number"
+  [ngClass]="{'divisible-by-five': +number % 5 === 0}"
   [style.transform]="'rotate(' + (i * 6) + 'deg) translateY(-120px)'">
-  <span [ngClass]="{'divisible-by-five': +number % 5 === 0}">{{ number }}</span>
+  <span [ngClass]="{'divisible-by-five': +number % 5 === 0}">
+    {{ number }}
+  </span>
 </div>
