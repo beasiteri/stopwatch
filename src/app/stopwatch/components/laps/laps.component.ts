@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { TimeFormatService } from '../services/time-format.service';
+import { TimeFormatService } from '../../services/time-format.service';
 
 @Component({
   selector: 'app-laps',

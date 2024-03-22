@@ -4,9 +4,7 @@
     <div class="stopwatch-screen">
       <div class="stopwatch-center"></div>
       <app-timer [milliseconds]="time"></app-timer>
-      <div class="hour-hand" [style.transform]="'rotate(' + calculateHourHandAngle() + 'deg)'"></div>
-      <div class="minute-hand" [style.transform]="'rotate(' + calculateMinuteHandAngle() + 'deg)'"></div>
-      <div class="second-hand" [style.transform]="'rotate(' + calculateSecondHandAngle() + 'deg)'"></div>
+      <app-watch-hands [time]="time"></app-watch-hands>
       <div class="number" [ngClass]="{'divisible-by-five': +number % 5 === 0}"
         *ngFor="let number of numbers; let i = index"
         [style.transform]="'rotate(' + (i * 6) + 'deg) translateY(-120px)'">
