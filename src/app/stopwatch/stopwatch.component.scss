@@ -48,40 +48,6 @@
         transform: translate(-50%, -50%);
         width: 15px;
       }
-
-      /* ---------- Numbers ---------- */
-      .number {
-        color: #d69c1a;
-        font-size: 18px;
-        font-weight: bold;
-        left: 47%;
-        position: absolute;
-        top: 50%;
-        transform-origin: top;
-
-        &::before {
-          background-color: white;
-          bottom: 100%;
-          content: '';
-          height: 15px;
-          left: 50%;
-          position: absolute;
-          transform: translateX(-30%);
-          width: 1px;
-        }
-
-        &.divisible-by-five:before {
-          width: 4px;
-        }
-
-        &:not(.divisible-by-five) {
-          visibility: hidden;
-
-          &:before {
-            visibility: visible;
-          }
-        }
-      }
     }
   }
 }

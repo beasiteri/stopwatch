@@ -6,7 +6,7 @@ import { TimeFormatService } from './services/time-format.service';
   templateUrl: './stopwatch.component.html',
   styleUrls: ['./stopwatch.component.scss']
 })
-export class StopwatchComponent implements OnInit {
+export class StopwatchComponent {
   time = 0;
   numbers: string[] = [];
   laps: number[] = [];
@@ -14,22 +14,6 @@ export class StopwatchComponent implements OnInit {
   isRunning: boolean = false;
 
   constructor(private timeFormatService: TimeFormatService) { }
-
-  ngOnInit(): void {
-    this.calculateNumbers();
-  }
-
-  calculateNumbers(): void {
-    const numberCount = 60;
-    const angleIncrement = 360 / numberCount;
-    let angle = -90;
-
-    for (let i = 0; i < numberCount; i++) {
-      const value = (i % 60 === 0 ? 60 : i % 60).toString().padStart(2, '0');
-      this.numbers.push(value);
-      angle += angleIncrement;
-    }
-  }
 
   handleStartStopClicked(): void {
     if (this.isRunning) {
@@ -59,7 +43,6 @@ export class StopwatchComponent implements OnInit {
     clearInterval(this.intervalId);
     this.time = 0;
     this.isRunning = false;
-    this.laps = [];
   }
 
   handleLapClicked(): void {

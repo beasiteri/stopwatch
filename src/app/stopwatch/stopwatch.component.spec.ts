@@ -5,6 +5,7 @@ import { ButtonsComponent } from './components/buttons/buttons.component';
 import { LapsComponent } from './components/laps/laps.component';
 import { TimerComponent } from './components/timer/timer.component';
 import { WatchHandsComponent } from './components/watch-hands/watch-hands.component';
+import { NumbersComponent } from './components/numbers/numbers.component';
 
 describe('StopwatchComponent', () => {
   let component: StopwatchComponent;
@@ -12,7 +13,7 @@ describe('StopwatchComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [StopwatchComponent, ButtonsComponent, LapsComponent, TimerComponent, WatchHandsComponent],
+      declarations: [StopwatchComponent, ButtonsComponent, LapsComponent, TimerComponent, WatchHandsComponent, NumbersComponent],
     });
     fixture = TestBed.createComponent(StopwatchComponent);
     component = fixture.componentInstance;

@@ -8,6 +8,7 @@ import { TimeFormatService } from './stopwatch/services/time-format.service';
 import { LapsComponent } from './stopwatch/components/laps/laps.component';
 import { TimerComponent } from './stopwatch/components/timer/timer.component';
 import { WatchHandsComponent } from './stopwatch/components/watch-hands/watch-hands.component';
+import { NumbersComponent } from './stopwatch/components/numbers/numbers.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { WatchHandsComponent } from './stopwatch/components/watch-hands/watch-ha
     ButtonsComponent,
     LapsComponent,
     TimerComponent,
-    WatchHandsComponent
+    WatchHandsComponent,
+    NumbersComponent
   ],
   imports: [
     BrowserModule
