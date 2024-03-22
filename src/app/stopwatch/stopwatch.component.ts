@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class StopwatchComponent implements OnInit {
   time = 0;
   numbers: string[] = [];
-  isRunning: boolean = false;
-  intervalId: ReturnType<typeof setTimeout> | undefined;
   laps: number[] = [];
+  intervalId: ReturnType<typeof setTimeout> | undefined;
+  isRunning: boolean = false;
 
   ngOnInit(): void {
     this.calculateNumbers();
@@ -42,7 +42,7 @@ export class StopwatchComponent implements OnInit {
     }
   }
 
-  toggleStartStop(): void {
+  handleStartStopClicked(): void {
     if (this.isRunning) {
       this.stop();
     } else {
@@ -66,18 +66,18 @@ export class StopwatchComponent implements OnInit {
     }
   }
 
-  reset(): void {
+  handleResetClicked(): void {
     clearInterval(this.intervalId);
     this.time = 0;
     this.isRunning = false;
     this.laps = [];
   }
 
-  lap(): void {
+  handleLapClicked(): void {
     this.laps.push(this.time);
   }
 
-  clearLaps(): void {
+  handleClearLapClicked(): void {
     this.laps = [];
   }
 
