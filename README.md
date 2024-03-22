@@ -4,6 +4,9 @@ This is an Aangular application that implements a stopwatch functionality allowi
 It includes additional features such as lap recording and an analog clock display synchronized with the elapsed time.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
 
+# Important  
+The Angular CLI requires a minimum Node.js version of either v14.15 or v16.10
+
 ## Screenshot of the page
 ![](src/assets/stopwatch.png)
 
